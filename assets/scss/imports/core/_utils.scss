@@ -1,14 +1,12 @@
 /* Utils
 ------------------------------------------------------------*/
 
-/* lazy load */
-img.lazy {
-  opacity: 0;
-  transition: opacity 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+.--noto-fonts {
+  font-family: var(--noto-fonts);
+}
 
-  &.loaded {
-    opacity: 1;
-  }
+.u-txt-align {
+  text-align: center;
 }
 
 /* only device */
@@ -17,7 +15,11 @@ img.lazy {
   display: none !important;
 }
 
-@include maxW {
+@include mobile {
+  .u-txt-align {
+    text-align: left;
+  }
+
   .pc-only {
     display: none !important;
   }
