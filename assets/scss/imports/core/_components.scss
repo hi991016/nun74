@@ -101,3 +101,31 @@
     }
   }
 }
+
+.link-hover {
+  width: fit-content;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  text-decoration: none;
+  line-height: 1.6;
+
+  &:hover {
+    &:before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black-cl);
+    bottom: 4px;
+    left: 0;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

@@ -67,7 +67,7 @@ const onScroll = () => {
 const user = "contact",
   domain = "noun-coltd.jp",
   mail = `${user}@${domain}`,
-  link = `<a href="mailto:${mail}">Mail: ${mail}</a>`;
+  link = `<a class="link-hover" href="mailto:${mail}">${mail}</a>`;
 document.querySelector("[data-mail]").innerHTML = link;
 
 // ### ===== DOMCONTENTLOADED ===== ###

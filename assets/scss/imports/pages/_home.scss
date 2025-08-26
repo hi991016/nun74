@@ -162,11 +162,7 @@
 
       a {
         font-size: 2.6rem;
-        line-height: 1.6;
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
-        padding-left: 60px;
+        margin-left: 60px;
       }
     }
 
@@ -183,7 +179,7 @@
         margin: 115px auto 100px;
 
         a {
-          padding-left: 7px;
+          margin-left: 7px;
         }
       }
     }
@@ -201,7 +197,7 @@
         a {
           font-size: 2.2rem;
           line-height: 1.63;
-          padding-left: 0;
+          margin-left: 0;
         }
       }
     }
@@ -250,9 +246,6 @@
         a {
           font-size: 1.4rem;
           line-height: 2;
-          text-decoration: underline;
-          text-decoration-thickness: 1px;
-          text-underline-offset: 3px;
         }
       }
     }
@@ -291,7 +284,6 @@
 
           a {
             margin-top: 15px;
-            line-height: 1.2;
           }
         }
       }
@@ -329,23 +321,19 @@
     }
 
     &_link {
-      margin-top: 30px;
+      margin-top: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
+      font-size: 1.8rem;
 
       &:first-child {
-        margin-top: 60px;
+        margin-top: 58px;
       }
 
       a {
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
         display: inline-block;
-        font-size: 1.8rem;
-        line-height: 1.15;
       }
     }
 
@@ -361,18 +349,17 @@
       p {
         margin-top: 15px;
         font-size: 1.6rem;
-        line-height: 1.4;
+        line-height: 1.3;
       }
     }
 
     &_copyright {
-      margin-top: 55px;
+      margin-top: 58px;
       padding: 0 min(170px, 12.445vw);
 
       p {
         font-size: 1.2rem;
         padding-top: 25px;
-        // border-top: 1px solid #707070;
       }
     }
 
@@ -400,7 +387,7 @@
       }
 
       &_wrapper {
-        margin-top: 82px;
+        margin-top: 78px;
       }
 
       &_introduce {
@@ -417,19 +404,17 @@
       }
 
       &_link {
+        margin-top: 22px;
         justify-content: flex-start;
+        font-size: 1.6rem;
 
         &:first-child {
-          margin-top: 64px;
-        }
-
-        a {
-          font-size: 1.6rem;
+          margin-top: 60px;
         }
       }
 
       &_address {
-        margin-top: 103px;
+        margin-top: 100px;
 
         h3 {
           font-size: 1.6rem;
@@ -441,7 +426,7 @@
       }
 
       &_copyright {
-        margin-top: 45px;
+        margin-top: 50px;
         padding: 0;
 
         p {
