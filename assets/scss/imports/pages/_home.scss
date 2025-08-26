@@ -208,6 +208,97 @@
     }
   }
 
+  // ===== company =====
+  .company {
+    &_wrapper {
+      margin: 57px 0 38px;
+    }
+
+    &_table {
+      width: max(600px, 43.924vw);
+      margin: 33px auto 0;
+
+      tr {
+        display: grid;
+        grid-template-columns: 1fr 73.333%;
+        gap: 15px;
+        border-bottom: 1px solid rgba($color: #707070, $alpha: 0.35);
+        padding: 25px 0;
+
+        &:last-child {
+          border-bottom: unset;
+        }
+      }
+
+      td {
+        font-family: var(--noto-fonts);
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.45;
+
+        &.address {
+          display: flex;
+          align-items: flex-end;
+          gap: 35px;
+        }
+
+        span {
+          font-size: 1.8rem;
+          display: inline-block;
+          margin-left: 21px;
+        }
+
+        a {
+          font-size: 1.4rem;
+          line-height: 2;
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          text-underline-offset: 3px;
+        }
+      }
+    }
+
+    @include tablet {
+      &_wrapper {
+        margin: 80px 0;
+      }
+
+      &_table {
+        margin-top: 90px;
+      }
+    }
+
+    @include mobile {
+      &_table {
+        margin-top: 62px;
+        width: 100%;
+
+        tr {
+          grid-template-columns: 1fr 64.856%;
+          padding: 20px 0;
+        }
+
+        td {
+          font-size: 1.4rem;
+
+          &.address {
+            display: block;
+          }
+
+          span {
+            font-size: 1.4rem;
+            margin-left: 15px;
+          }
+
+          a {
+            margin-top: 15px;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+
   // ===== contact =====
   .contact {
     &_container {
@@ -282,7 +373,7 @@
       p {
         font-size: 1.2rem;
         padding-top: 25px;
-        border-top: 1px solid;
+        border-top: 1px solid #707070;
       }
     }
 
