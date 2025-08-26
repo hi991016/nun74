@@ -1,8 +1,5 @@
 "use strict";
 
-// ===== globals =====
-const isMobile = window.matchMedia("(max-width: 599px)");
-
 // ===== init =====
 const init = () => {
   // # app height
@@ -45,6 +42,13 @@ const onScroll = () => {
 ["pageshow", "scroll"].forEach((evt) => {
   window.addEventListener(evt, onScroll, { passive: true });
 });
+
+// ===== email =====
+const user = "contact",
+  domain = "noun-coltd.jp",
+  mail = `${user}@${domain}`,
+  link = `<a href="mailto:${mail}">Mail: ${mail}</a>`;
+document.querySelector("[data-mail]").innerHTML = link;
 
 // ### ===== DOMCONTENTLOADED ===== ###
 window.addEventListener("pageshow", () => {

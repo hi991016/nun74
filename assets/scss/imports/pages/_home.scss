@@ -88,6 +88,7 @@
       p {
         margin-top: 32px;
         font-family: var(--noto-fonts);
+        font-weight: 500;
         font-size: 2.6rem;
         line-height: 1.42;
         letter-spacing: 1px;
@@ -165,7 +166,7 @@
         line-height: 1.6;
         text-decoration: underline;
         text-decoration-thickness: 1px;
-        text-underline-offset: 4px;
+        text-underline-offset: 3px;
         padding-left: 60px;
       }
     }
@@ -202,6 +203,159 @@
           font-size: 2.2rem;
           line-height: 1.63;
           padding-left: 0;
+        }
+      }
+    }
+  }
+
+  // ===== contact =====
+  .contact {
+    &_container {
+      min-height: 100%;
+      padding-bottom: 35px;
+    }
+
+    &_wrapper {
+      margin: 57px 0 0;
+      justify-content: flex-start;
+    }
+
+    &_introduce {
+      margin-top: 62px;
+
+      h3 {
+        font-size: 2.8rem;
+        font-weight: 300;
+        line-height: 1.15;
+      }
+
+      p {
+        margin-top: 23px;
+        font-family: var(--noto-fonts);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.45;
+      }
+    }
+
+    &_link {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      &:first-child {
+        margin-top: 60px;
+      }
+
+      a {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+        display: inline-block;
+        font-size: 1.8rem;
+        line-height: 1.15;
+      }
+    }
+
+    &_address {
+      margin-top: 100px;
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.15;
+      }
+
+      p {
+        margin-top: 15px;
+        font-size: 1.6rem;
+        line-height: 1.4;
+      }
+    }
+
+    &_copyright {
+      margin-top: 55px;
+      padding: 0 min(170px, 12.445vw);
+
+      p {
+        font-size: 1.2rem;
+        padding-top: 25px;
+        border-top: 1px solid;
+      }
+    }
+
+    @include tablet {
+      &_wrapper {
+        margin-top: 173px;
+      }
+
+      &_introduce {
+        margin-top: 122px;
+      }
+
+      &_address {
+        margin-top: 110px;
+      }
+
+      &_copyright {
+        padding: 0 min(70px, 8.642vw);
+      }
+    }
+
+    @include mobile {
+      &_container {
+        padding-bottom: 30px;
+      }
+
+      &_wrapper {
+        margin-top: 82px;
+      }
+
+      &_introduce {
+        margin-top: 80px;
+
+        h3 {
+          font-size: 2.8rem;
+          line-height: 1.35;
+        }
+
+        p {
+          margin-top: 15px;
+        }
+      }
+
+      &_link {
+        justify-content: flex-start;
+
+        &:first-child {
+          margin-top: 64px;
+        }
+
+        a {
+          font-size: 1.6rem;
+        }
+      }
+
+      &_address {
+        margin-top: 103px;
+
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+
+      &_copyright {
+        margin-top: 45px;
+        padding: 0;
+
+        p {
+          padding-top: 30px;
         }
       }
     }
