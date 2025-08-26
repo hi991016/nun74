@@ -58,7 +58,6 @@
         transform: scaleY(0);
         transform-origin: top;
         animation: growLine 1s forwards;
-        animation-delay: 0.2s;
 
         @keyframes growLine {
           from {
@@ -222,7 +221,7 @@
         display: grid;
         grid-template-columns: 1fr 73.333%;
         gap: 15px;
-        border-bottom: 1px solid rgba($color: #707070, $alpha: 0.35);
+        // border-bottom: 1px solid rgba($color: #707070, $alpha: 0.35);
         padding: 25px 0;
 
         &:last-child {
@@ -373,7 +372,7 @@
       p {
         font-size: 1.2rem;
         padding-top: 25px;
-        border-top: 1px solid #707070;
+        // border-top: 1px solid #707070;
       }
     }
 

@@ -13,16 +13,35 @@ const appHeight = () => {
 };
 window.addEventListener("resize", appHeight);
 
+// ===== lenis =====
+const lenis = new Lenis({
+  duration: 1.0,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(1 - t, 2.5)),
+  smooth: true,
+  mouseMultiplier: 1.0,
+  smoothTouch: true,
+  touchMultiplier: 1.5,
+  infinite: false,
+  direction: "vertical",
+  gestureDirection: "vertical",
+});
+function raf(t) {
+  lenis.raf(t);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 // ===== scroll trigger =====
-const [fadeInArray, lineArray] = [
+const [fadeInArray, lineArray, anim] = [
   document.querySelectorAll("[data-fadein]"),
   document.querySelectorAll("[data-vertical-line]"),
+  document.querySelectorAll("[data-anim]"),
 ];
 
 const initScrollTrigger = (arr) => {
   arr.forEach((elem) => {
     const distInView =
-      elem.getBoundingClientRect().top - window.innerHeight + 100;
+      elem.getBoundingClientRect().top - window.innerHeight + 50;
     elem.classList.toggle("--show", distInView < 0);
   });
 };
@@ -33,6 +52,7 @@ const onScroll = () => {
     requestAnimationFrame(() => {
       initScrollTrigger(fadeInArray);
       initScrollTrigger(lineArray);
+      initScrollTrigger(anim);
       ticking = false;
     });
     ticking = true;
